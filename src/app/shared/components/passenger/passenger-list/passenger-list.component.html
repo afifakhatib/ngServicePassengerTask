@@ -1,0 +1,12 @@
+
+
+
+<mat-list role="list" class="bg-dark" *ngIf="passList; else noPass">
+    <mat-list-item role="listitem" class="text-white"> {{passList.fullname}} 
+      <mat-divider class="bg-light"></mat-divider>
+    </mat-list-item>
+  </mat-list>
+
+  <ng-template #noPass>
+     <p class="alert alert-warning">No passenger Added yet !!</p>
+  </ng-template>

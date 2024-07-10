@@ -1,0 +1,25 @@
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <app-passenger-count 
+            [getCheckInCount]="TotalCheckIn" [getTotalcount]="Totalcount"></app-passenger-count>
+        </div>
+        <div class="col-md-8 offset-md-2">
+             <app-passenger-list [passList]="pass"
+             *ngFor="let pass of passengerArr">
+             </app-passenger-list>
+        </div>
+        <div class="col-md-8 offset-md-2 mt-5">
+            <app-passenger-card [passengerObj]="passObj"
+             *ngFor="let passObj of passengerArr" (emitRemovecount)="getCount()">
+            </app-passenger-card>
+        </div>
+    </div>
+</div>
+
+
+<!--  *ngFor="let passlist of passengerArr" -->
+
+
+
